@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Student Dashboard | CampusMove</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<header class="site-header"><a class="brand" href="index.html"><span class="brand-icon">⚡</span><span>Campus<span class="brand-accent">Move</span><small>EV FEE PORTAL</small><small class="college-name-small">NEHRU COLLEGE OF ENGINEERING &amp; RESEARCH CENTRE</small></span></a><nav><a class="active" href="student-dashboard.html">My Dashboard</a><a href="admin-login.html">Admin Login</a><a href="index.html" id="studentLogout">Logout</a></nav></header>
+<main class="page-wrap">
+  <section class="welcome-row"><div><p class="eyebrow">STUDENT PORTAL</p><h1>My dashboard</h1><p class="muted">Your campus journeys and fee overview.</p></div><div class="profile-chip"><div class="avatar" id="studentAvatar">S</div><div><strong id="studentWelcome">Student</strong><span id="studentMeta">Department · Semester</span></div></div></section>
+  <div class="stats-grid">
+    <article class="stat-card"><span class="stat-label">Trips this month</span><strong id="monthTrips">0</strong><span class="stat-foot">Recorded EV trips</span></article>
+    <article class="stat-card"><span class="stat-label">Charges this month</span><strong id="monthFee">₹0</strong><span class="stat-foot">₹20 per completed ride</span></article>
+    <article class="stat-card"><span class="stat-label">Total outstanding</span><strong id="outstanding">₹0</strong><span class="stat-foot">After recorded payments</span></article>
+    <article class="stat-card"><span class="stat-label">Payment status</span><strong id="paymentStatus" class="status status-pending">Pending</strong><span class="stat-foot">Based on recorded balance</span></article>
+  </div>
+  <section class="content-card">
+    <div class="section-heading"><div><h2>Record a new trip</h2><p class="muted">Record your campus rides. Only completed rides cost ₹20; pending and cancelled rides cost ₹0.</p></div></div>
+    <form id="tripForm" class="trip-form">
+      <div><label for="tripDate">Trip date</label><input id="tripDate" type="date" required></div>
+      <div><label for="tripFrom">From</label><select id="tripFrom" required><option value="">Choose location</option></select></div>
+      <div><label for="tripTo">To</label><select id="tripTo" required><option value="">Choose location</option></select></div>
+      <button class="btn btn-primary" type="submit">+ Add trip</button>
+    </form>
+  </section>
+  <section class="content-card">
+    <div class="section-heading"><div><h2>My trip history</h2><p class="muted">Search your rides, export them, or print a ride fee statement.</p></div><div class="history-actions"><button id="exportMyTrips" class="btn btn-outline" type="button">Export CSV</button><button id="printReceipt" class="btn btn-outline" type="button">⤓ Receipt / PDF</button></div></div><div class="history-search"><input id="tripSearch" type="search" placeholder="Search by date or location…" aria-label="Search trip history"></div>
+    <div class="table-scroll"><table><thead><tr><th>Date</th><th>From</th><th>To</th><th>Fee</th></tr></thead><tbody id="studentTripsTable"></tbody></table></div>
+    <p id="studentEmpty" class="empty-state">No trips recorded yet. Add your first trip above.</p>
+  </section>
+  <section class="content-card"><div class="section-heading"><div><h2>Month-wise fee statement</h2><p class="muted">Each month includes only rides completed in that month. No separate monthly fee is added.</p></div><button class="btn btn-outline" id="exportMonthlyStudent" type="button">Export monthly CSV</button></div><div class="table-scroll"><table><thead><tr><th>Month</th><th>Completed rides</th><th>Ride charges</th><th>Payments made that month</th></tr></thead><tbody id="studentMonthlyTable"></tbody></table></div><p class="muted small-note">Rate: ₹20 per completed ride. Payments are shown by payment date; they reduce the overall outstanding balance.</p></section>
+  <section class="content-card date-due-card"><div><h2>Calculate dues by date</h2><p class="muted">Completed rides × ₹20, minus payments through your selected date.</p></div><div class="inline-form"><input type="date" id="dueDate" aria-label="Calculate dues through date"><button class="btn btn-outline" type="button" id="calculateDue">Calculate</button></div><div class="due-result" id="dueResult">Select a date to calculate your due.</div></section>
+</main><footer>CampusMove · Nehru College of Engineering &amp; Research Centre · Student portal</footer><script src="app.js"></script>
+</body></html>

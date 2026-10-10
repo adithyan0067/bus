@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NCERC CampusMove | Student Portal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html"><span class="brand-icon">⚡</span><span>Campus<span class="brand-accent">Move</span><small>EV FEE PORTAL</small><small class="college-name-small">NEHRU COLLEGE OF ENGINEERING &amp; RESEARCH CENTRE</small></span></a>
+    <nav><a class="active" href="index.html">Student Portal</a><a href="admin-login.html">Admin Login</a></nav>
+  </header>
+  <main class="auth-layout">
+    <section class="hero-panel">
+      <!-- Replace the placeholder below with the direct URL of the Nehru College logo image. -->
+      <img class="college-logo" src="YOUR_NEHRU_COLLEGE_LOGO_IMAGE_URL_HERE" alt="Nehru College of Engineering and Research Centre logo" onerror="this.style.display='none'">
+      <span class="college-formal-name">NEHRU COLLEGE OF ENGINEERING &amp; RESEARCH CENTRE</span><a class="college-site-link" href="https://ncerc.ac.in/" target="_blank" rel="noopener">Official college website ↗</a><span class="eyebrow">CAMPUS EV TRANSPORT</span>
+      <h1>Your campus trips.<br><span>Simply tracked.</span></h1>
+      <p>A student-friendly EV transport portal for Nehru College of Engineering &amp; Research Centre. Track campus journeys, review your monthly transport fee, and keep payment records in one place.</p>
+      <div class="hero-stats"><div><strong>Monthly</strong><span>Transport fee</span></div><div><strong>Anytime</strong><span>Trip history</span></div><div><strong>PDF</strong><span>Receipt print</span></div><div><strong>CSV</strong><span>Trip export</span></div></div>
+    </section>
+    <section class="auth-card">
+      <div class="card-symbol">🎓</div>
+      <p class="eyebrow">STUDENT PORTAL</p>
+      <div class="auth-tabs" role="tablist" aria-label="Student account">
+        <button class="auth-tab active" type="button" id="loginTab" data-auth-tab="login">Login</button>
+        <button class="auth-tab" type="button" id="registerTab" data-auth-tab="register">Register</button>
+      </div>
+      <form id="studentLoginForm" class="auth-form">
+        <h2>Welcome back</h2><p class="muted">Log in to view your campus trips and fee details.</p>
+        <label for="loginStudentId">Student ID</label><input id="loginStudentId" autocomplete="username" required placeholder="e.g. NCER2026001">
+        <label for="loginPassword">Password</label><input id="loginPassword" type="password" autocomplete="current-password" required placeholder="Enter your password">
+        <p id="studentLoginError" class="error-text" aria-live="polite"></p>
+        <button class="btn btn-primary full" type="submit">Login <span>→</span></button>
+      </form>
+      <form id="studentRegisterForm" class="auth-form" hidden>
+        <h2>Create your account</h2><p class="muted">Register once to access your student dashboard.</p>
+        <label for="registerStudentId">Student ID</label><input id="registerStudentId" autocomplete="username" required placeholder="e.g. NCER2026001">
+        <label for="registerStudentName">Full name</label><input id="registerStudentName" autocomplete="name" required placeholder="Your full name">
+        <div class="form-grid">
+          <div><label for="registerDepartment">Department</label><select id="registerDepartment" required><option value="">Choose department</option><option>CSE</option><option>ECE</option><option>EEE</option><option>ME</option><option>CE</option><option>IT</option><option>Other</option></select></div>
+          <div><label for="registerSemester">Semester</label><select id="registerSemester" required><option value="">Choose</option><option>S1</option><option>S2</option><option>S3</option><option>S4</option><option>S5</option><option>S6</option><option>S7</option><option>S8</option></select></div>
+        </div>
+        <label for="registerPassword">Create password</label><input id="registerPassword" type="password" minlength="4" autocomplete="new-password" required placeholder="At least 4 characters">
+        <p id="studentRegisterError" class="error-text" aria-live="polite"></p>
+        <button class="btn btn-primary full" type="submit">Create account <span>→</span></button>
+      </form>
+    </section>
+  </main>
+  <footer>CampusMove · Nehru College of Engineering &amp; Research Centre</footer>
+  <script src="app.js"></script>
+</body>
+</html>

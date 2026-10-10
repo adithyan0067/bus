@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Login | CampusMove</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="admin-login-page">
+  <header class="site-header">
+    <a class="brand" href="index.html"><span class="brand-icon">⚡</span><span>Campus<span class="brand-accent">Move</span><small>EV FEE PORTAL</small><small class="college-name-small">NEHRU COLLEGE OF ENGINEERING &amp; RESEARCH CENTRE</small></span></a>
+    <nav><a href="index.html">Student Portal</a><a class="active" href="admin-login.html">Admin Login</a></nav>
+  </header>
+  <main class="admin-auth-wrap">
+    <section class="admin-auth-card">
+      <div class="admin-lock">🔐</div><p class="eyebrow">OFFICE ACCESS</p><h1>Admin login</h1>
+      <p class="muted">Manage student trip records, fee dues, and payment status.</p>
+      <form id="adminLoginForm">
+        <label for="adminUsername">Username</label><input id="adminUsername" autocomplete="username" required placeholder="Admin username">
+        <label for="adminPassword">Password</label><input id="adminPassword" type="password" autocomplete="current-password" required placeholder="Admin password">
+        <p id="adminLoginError" class="error-text" aria-live="polite"></p>
+        <button class="btn btn-primary full" type="submit">Sign in to Admin Portal <span>→</span></button>
+      </form>
+      <a class="back-link" href="index.html">← Back to Student Portal</a>
+    </section>
+  </main>
+  <footer>CampusMove · Nehru College of Engineering &amp; Research Centre</footer>
+  <script src="app.js"></script>
+</body>
+</html>
